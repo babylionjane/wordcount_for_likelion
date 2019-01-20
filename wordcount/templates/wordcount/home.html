@@ -1,0 +1,18 @@
+{% extends 'wordcount/base.html' %}
+{% block content %}
+<h1>Type Your Words Here</h1>
+
+
+<a href="{%url 'about'%}">
+    <button type="button" class="btn btn-outline-info">ABOUT</button>
+</a>
+
+
+<div class="input-group">
+  <form action ="{% url 'result'%}">
+    <textarea class="form-control" cols="40" rows="10" name="fulltext" aria-label="With textarea"></textarea>
+    <input type="submit" value="Count!">
+  </form>
+</div>
+
+{% endblock %}

@@ -1,3 +1,6 @@
+{% extends 'wordcount/base.html' %}
+
+{% block content %}
 <h1>당신이 입력한 텍스트는 {{ total }}로 구성되어 있습니다. 뿅!</h1>
 
 <a href="{% url 'home' %}"> 다시 하기 </a>
@@ -8,6 +11,9 @@
 <h2> 단어 카운트 : {{ total }}</h2>
 
 {% for word, howmany in dictionary %}
-{{ word }} : {{ howmany }} <br>
-
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ word }} : {{ howmany }}</li>
+    </ul>
 {%endfor%}
+
+{% endblock %}
