@@ -1,14 +1,18 @@
 {% extends 'wordcount/base.html' %}
 
 {% block content %}
-<h1>당신이 입력한 텍스트는 {{ total }}로 구성되어 있습니다. 뿅!</h1>
-
-<a href="{% url 'home' %}"> 다시 하기 </a>
 <br>
-<h2>입력한 텍스트 : {{ full }} </h2>
+<h5>당신이 입력한 텍스트는 {{ total }}로 구성되어 있습니다. 뿅!</h5><br>
+
+<a href="{%url 'home'%}">
+    <button type="button" class="btn btn-outline-info">다시하기</button><br>
+</a>
+
+<br><br>
+<p>입력한 텍스트 : {{ full }} </p>
 
 
-<h2> 단어 카운트 : {{ total }}</h2>
+<p> 단어 카운트 : {{ total }}</p>
 
 {% for word, howmany in dictionary %}
     <ul class="list-group list-group-flush">

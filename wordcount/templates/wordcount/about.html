@@ -1,9 +1,11 @@
 {% extends 'wordcount/base.html' %}
 {% block content %}
+<br>
 <h1>ABOUT</h1>
 
-<p>여기는 재인의 워드카운트 페이지지롱</p>
+<p>여기는 재인의 워드카운트 페이지지롱</p><br>
 
-<a href="{%url 'home'%}">Home 으로 돌아가기</a>
-
+<a href="{%url 'home'%}">
+    <button type="button" class="btn btn-outline-info">HOME</button><br>
+</a>
 {% endblock %}

@@ -10,15 +10,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/wordcount.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
     <title>WORDCOUNT</title>
   </head>
   <body>
-    <h1>Jane's Word Count Page - 서강멋사 만만세</h1>
-
-    {% block content %}
-
-    {% endblock %}
-    
+    <div class='boxy-parent'>
+      <div class='boxy-child' style='width: 500px;'>
+        <h2 style="font-family: 'Anton', sans-serif;">Jane's Word Count Page</h2>
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
